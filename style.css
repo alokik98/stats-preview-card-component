@@ -1,0 +1,140 @@
+.root {
+    --main-heading: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 10%;
+    background: hsl(233, 47%, 7%);
+}
+
+.container {
+    display: flex;
+    width: 70em;
+    height: 25em;
+    position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+}
+
+.inner-div-one {
+    display: inline-block;
+    width: 100%;
+    /* border: 2px dotted green; */
+    background: hsl(244, 38%, 16%);
+    padding: 45px 70px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+span {
+    font-size: 2rem;
+}
+
+.first-para {
+    font-family: 'Inter', sans-serif;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+.at {
+    color: hsl(277, 64%, 61%);
+}
+
+.sec-para {
+    margin-top: 50px;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.sec-para span {
+    font-size: 1rem;
+}
+
+ .thr-para {
+    display: flex;
+    width: 70%;
+    height: 5em;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.first-column span, .sec-column span, .thr-column span{
+    font-size: 1rem;
+}
+
+.first-column .stats, .sec-column .stats, .thr-column .stats {
+    color: hsl(0, 0%, 100%);
+    font-weight: bold;
+}
+
+.inner-div-two {
+    display: inline-flex;
+    width: 100%;
+    /* border: 2px dotted black; */
+    background: hsl(277, 64%, 61%);;
+    margin-right: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.footer  span, a{
+    font-size: 20px;
+    color: white;
+    justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        flex-direction: column-reverse;
+        width: 325px;
+        height: 710px;
+        margin: 100px 25px;
+        justify-content: flex-end;
+    }
+
+    .inner-div-two, img {
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 0px;
+    }
+
+    span {
+        font-size-adjust: inherit;
+    }
+
+    .thr-para {
+        justify-content: center;
+    }
+
+    .first-column, .sec-column {
+        margin-bottom: 5px;
+    }
+
+}
